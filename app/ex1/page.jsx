@@ -19,7 +19,7 @@ function Page() {
   const [rAx_B,setrAx_B] = useState(0)
   const [rB_Crane,setrB_Crane] = useState(0)
   const [rCrane_Box,setrCrane_Box] = useState(0)
-
+  const [rSum_B_Box,serSum] = useState("")
   const [weightBox,setweightBox] = useState(0)
   const [weightCrane,setweightCrane] = useState(0)
 
@@ -28,6 +28,8 @@ const handleSubmit = () =>{
   const calculateB = rB_Crane * weightCrane *1000 + (rCrane_Box+rB_Crane) * weightBox*1000
   setB(calculateB/rAx_B)
 }
+
+
   return (
     <div className="flex w-screen h-screen">
       <MathJaxContext config={mathJaxConfig}>
