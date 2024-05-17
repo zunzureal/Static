@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-arrow {
+    display: inline-block;
+
+    flex: 0 auto;
+    -webkit-box-flex: 0;
+
+    font-family: sans-serif;
+ 
+    padding-left: 3em;
+    position: relative;
+    text-decoration: none;
+}
+
+.link-arrow::before,
+.link-arrow::after {
+    content: "->";
+    display: block;
+    font-family: Inter;
+    font-size: inherit;
+
+    position: absolute;
+    top: 50%;
+    right: 32px;
+
+    transform: translate(0%, -50%);
+    transition: all 0.5s cubic-bezier(0.25, 0.25, 0.08, 1.08);
+}
+
+.link-arrow.font-reg::before,
+.link-arrow.font-reg::after {
+    font-weight: 300;
+}
+
+.link-arrow::before {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+}
+
+.link-arrow:hover::before {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.link-arrow:hover::after {
+    opacity: 0;
+    transform: translate(100%, -50%);
+}
