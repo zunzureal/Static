@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.noScroll {
+    overflow-x: hidden;
+}
+
 .link-arrow {
     display: inline-block;
 
