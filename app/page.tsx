@@ -12,8 +12,8 @@ import Spline from '@splinetool/react-spline';
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-start justify-center gap-4 py-8 mt-14 md:py-10">
-			<div className="inline-block max-w-lg text-left justify-start">
+		<section className="noScroll flex flex-col items-start justify-center gap-4 py-8 md:py-10">
+			<div className="inline-block max-w-lg text-left justify-start z-10">
 				<h1 className={title()}>Best&nbsp;</h1>
 				<h1 className={title({ color: "violet" })}>Practise&nbsp;</h1>
 				<br />
@@ -25,7 +25,7 @@ export default function Home() {
 				</h2>
 			</div>
 
-			<div className="flex gap-3">
+			<div className="flex gap-3 z-10">
 				<Button className="w-36 h-12 bg-gradient-to-tr from-pink-500 to-purple-500 text-white">
 					<span className="pl-12">
 						<span className="pr-4">Get Started</span>
@@ -36,7 +36,10 @@ export default function Home() {
 					Watch Video
 				</Button>
 			</div>
-			<Spline className="absolute ml-36 mt-20" scene="https://prod.spline.design/o2qhn6uXcboL4xlG/scene.splinecode" />
+			<Spline className="absolute ml-36 hidden md:block" scene="https://prod.spline.design/o2qhn6uXcboL4xlG/scene.splinecode" />
+			<div className="sm:hidden">
+				<Spline className="absolute" scene="https://prod.spline.design/o2qhn6uXcboL4xlG/scene.splinecode" />
+			</div>
 		</section >
 	);
 }
