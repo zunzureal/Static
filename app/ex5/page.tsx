@@ -143,6 +143,15 @@ function page() {
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
+              <p>To find Ay use the following relation.
+              </p>
+              <MathJax>{`$$\\ A_y + B_y = 0 $$`}</MathJax>
+              <p>Substitute the known values in the above expression.</p>
+              <MathJax>{`$$\\ A_y + ${By} N = 0 $$`}</MathJax>
+              <MathJax>{`$$\\ A_y = -${By} N$$`}</MathJax>
+            </div>
+
+            <div className='flex flex-col justify-start items-start border p-1'>
               <p>Find Az by adding all the forces along z-axis using the following relation.
               </p>
               <MathJax>{`$$\\ A_z - W = 0 $$`}</MathJax>
