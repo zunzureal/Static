@@ -108,7 +108,7 @@ function page() {
                   <MathJax inline>{`\\( \\theta = \\tan^{-1}\\left(\\frac{${l_D} + ${l_CB}}{${len_w}}\\right) \\)`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
-                  <MathJax className="mb-[10px]">{`\\( \\theta = ${ang_a} \\)`}</MathJax>
+                  <MathJax className="mb-[10px]">{`\\( \\theta = ${ang_a}^o \\)`}</MathJax>
                 </div>
               </div>
               <div className="flex-col w-1/2 h-full mt-[5px] border">
@@ -117,7 +117,7 @@ function page() {
                   <MathJax inline>{`\\( \\tan \\theta = \\frac{${l_D}}{${l_B}} \\)`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
-                  <MathJax>{`\\( \\theta = ${ang_b} \\)`}</MathJax>
+                  <MathJax>{`\\( \\theta = ${ang_b}^o \\)`}</MathJax>
                 </div>
               </div>
             </div>
@@ -130,10 +130,10 @@ function page() {
                 <MathJax >{`\\( \\sum F_y = 0 ; F_A \\sin( ${ang_a} ) - F_B \\sin( ${ang_b} ) = 0 \\)`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax >{`\\( \\ F_A = ${aForce} \\)`}</MathJax>
+                <MathJax >{`\\( \\ F_A = ${aForce} N \\)`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax >{`\\( \\ F_B = ${bForce} \\)`}</MathJax>
+                <MathJax >{`\\( \\ F_B = ${bForce} N \\)`}</MathJax>
               </div>
             </div>
           </div>
