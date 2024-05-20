@@ -94,7 +94,7 @@ function Page() {
             <div className='flex flex-col justify-start items-start border p-1'>
               <MathJax>{`$$\\sum F_y = 0 $$`}</MathJax>
               <p>Thus,</p>
-              <MathJax>{`$$C_y + T_{AB} \\sin(${T_angle}^\\circ) - 3 - 4 = 0$$`}</MathJax>
+              <MathJax>{`$$C_y + T_{AB} \\sin(${T_angle}^\\circ) - ${forceDownA} - ${forceDownB} = 0$$`}</MathJax>
               <MathJax>{`$$C_y = ${C_y} \\text{kN}$$`}</MathJax>
             </div>
           </div>
