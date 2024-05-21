@@ -10,26 +10,26 @@ function page() {
     inline: false
   };
 
-  const [c_y, setc_y] = useState(0);
-  const [c_x, setc_x] = useState(0);
+  const [c_y, setc_y] = useState<number>(10);
+  const [c_x, setc_x] = useState<number>(15);
 
-  const [a_x, seta_x] = useState(0);
-  const [a_y, seta_y] = useState(0);
+  const [a_x, seta_x] = useState<number>(3);
+  const [a_y, seta_y] = useState<number>(2);
 
-  const [len_arm, setlen_arm] = useState(0);
+  const [len_arm, setlen_arm] = useState<number>(24);
 
-  const [F, setF] = useState(0);
+  const [F, setF] = useState<number>(840);
 
-  const [vectorBC, setVectorBC] = useState(0);
-  const [vectorF, setVectorF] = useState(0);
-  const [vectorAC, setVectorAC] = useState(0);
-  const [vectorConverter, setVectorConverter] = useState(0);
+  const [vectorBC, setVectorBC] = useState<number[]>([0, 0, 0]);
+  const [vectorF, setVectorF] = useState<number[]>([0, 0, 0]);
+  const [vectorAC, setVectorAC] = useState<number[]>([0, 0, 0]);
+  const [vectorConverter, setVectorConverter] = useState<number[]>([0, 0, 0]);
 
-  const [matrix_i, getmatrixi] = useState(0);
-  const [matrix_j, getmatrixj] = useState(0);
+  const [matrix_i, getmatrixi] = useState<number>(0);
+  const [matrix_j, getmatrixj] = useState<number>(0);
 
-  const [M_A_X_result, getM_A_X_result] = useState(0);
-  const [M_A_Y_result, getM_A_Y_result] = useState(0);
+  const [M_A_X_result, getM_A_X_result] = useState<number>(0);
+  const [M_A_Y_result, getM_A_Y_result] = useState<number>(0);
 
 
   function handleSubmit() {
@@ -54,9 +54,9 @@ function page() {
     const normalizedK = vector_k / magnitude;
 
     // Scale the normalized vector by the scaling factor
-    const scaledI = scalingFactor * normalizedI;
-    const scaledJ = scalingFactor * normalizedJ;
-    const scaledK = scalingFactor * normalizedK;
+    const scaledI = (scalingFactor * normalizedI).toFixed(2);
+    const scaledJ = (scalingFactor * normalizedJ).toFixed(2);
+    const scaledK = (scalingFactor * normalizedK).toFixed(2);
 
     // Store the scaled vector components in an array
     const scaledVector = [scaledI, scaledJ, scaledK];
@@ -70,14 +70,15 @@ function page() {
 
     setVectorAC([vector_ac_i, vector_ac_j, vector_ac_k]);
 
-    const matrix_i = (c_y * (scaledK));
-    const matrix_j = -(c_x * (scaledK));
+    const matrix_i = (c_y * scaledK).toFixed(2);
+    const matrix_j = -(c_x * scaledK).toFixed(2);
+
 
     getmatrixi(matrix_i);
     getmatrixj(matrix_j);
 
-    const M_A_X_result = -(matrix_i/1000);
-    const M_A_Y_result = -(matrix_j/1000);
+    const M_A_X_result = (-(matrix_i / 1000)).toFixed(2);
+    const M_A_Y_result = (-(matrix_j / 1000)).toFixed(2);
 
     getM_A_X_result(M_A_X_result);
     getM_A_Y_result(M_A_Y_result);
@@ -146,8 +147,8 @@ function page() {
             <div className="flex w-full h-1/2 mb-[5px] w-[1355px] h-[450px]">
               <div className="flex-col w-1/2 h-full mt-[5px] mr-[5px] border">
                 <div className="mb-[10px] ml-[10px]">
-                  <MathJax inline>{`$$\\ r_{AC}   = ( ${c_x} - ${a_x} )i + ( ${c_y} - ${a_y} )j + ( 0 - 0 )k $$`}</MathJax>
-                  <MathJax inline>{`$$ r_{AC} = \\ ${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}i  ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}j  ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}k \\ $$`}</MathJax>
+                  <MathJax inline>{`$$\\ r_{BC}   = ( ${c_x} - ${a_x} )i + ( ${c_y} - ${a_y} )j + ( 0 - 0 )k $$`}</MathJax>
+                  <MathJax inline>{`$$ r_{BC} = \\ ${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}i  ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}j  ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}k \\ $$`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
                   <MathJax inline>{`$$ F = ${F} \\left[ \\frac{${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}\\mathbf{i} + ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}\\mathbf{j} - ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}\\mathbf{k}}{\\sqrt{(${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])})^2 + (${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])})^2 + (${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])})^2}} \\right] = ${Math.sign(vectorF[0]) === -1 ? '-' : '+'}${Math.abs(vectorF[0])}\\mathbf{i} ${Math.sign(vectorF[1]) === -1 ? '-' : '+'}${Math.abs(vectorF[1])}\\mathbf{j} ${Math.sign(vectorF[2]) === -1 ? '-' : '+'}${Math.abs(vectorF[2])}\\mathbf{k} \\ \\text{N} $$`}</MathJax>
@@ -159,8 +160,8 @@ function page() {
             </div>
             <div className="flex-col w-full h-1/2 border p-1 mt-[5px]">
               <div className="mb-[10px] ml-[5px]">
-                <MathJax inline>{`$$\\ r_{bc}   = ( ${c_x} - 0 )i + ( ${c_y} - 0 )j + ( 0 - 0 )k $$`}</MathJax>
-                <MathJax inline>{`$$ r_{bc} = \\ ${Math.sign(vectorAC[0]) === -1 ? '-' : '+'}${Math.abs(vectorAC[0])}i  ${Math.sign(vectorAC[1]) === -1 ? '-' : '+'}${Math.abs(vectorAC[1])}j \\ $$`}</MathJax>
+                <MathJax inline>{`$$\\ r_{ac}   = ( ${c_x} - 0 )i + ( ${c_y} - 0 )j + ( 0 - 0 )k $$`}</MathJax>
+                <MathJax inline>{`$$ r_{ac} = \\ ${Math.sign(vectorAC[0]) === -1 ? '-' : '+'}${Math.abs(vectorAC[0])}i  ${Math.sign(vectorAC[1]) === -1 ? '-' : '+'}${Math.abs(vectorAC[1])}j \\ $$`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
                 <MathJax>

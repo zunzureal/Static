@@ -10,11 +10,11 @@ function page() {
     inline: false
   };
 
-  const [l_CB, setl_CB] = useState(0);
-  const [l_B, setl_B] = useState(0);
-  const [l_D, setl_D] = useState(0);
-  const [l_A, setl_A] = useState(0);
-  const [F, setF] = useState(0);
+  const [l_CB, setl_CB] = useState(0.5);
+  const [l_B, setl_B] = useState(0.2);
+  const [l_D, setl_D] = useState(0.2);
+  const [l_A, setl_A] = useState(0.1);
+  const [F, setF] = useState(400);
 
   const [ang_a, setang_a] = useState(0);
   const [ang_b, setang_b] = useState(0)
