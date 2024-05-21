@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
 
-function page() {
+function Page() {
   const mathJaxConfig = {
     displayAlign: "left", // Set display alignment to left
     extensions: ["TeX/color.js"],
@@ -208,4 +208,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
