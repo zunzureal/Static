@@ -2,7 +2,7 @@
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code"
-import { Button } from "@nextui-org/react";
+import { Button, Dropdown, DropdownTrigger,DropdownMenu, DropdownItem } from "@nextui-org/react";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "../config/site"
 import { title, subtitle } from "../components/primitives";
@@ -26,12 +26,23 @@ export default function Home() {
 			</div>
 
 			<div className="flex gap-3 z-10">
-				<Button className="w-36 h-12 bg-gradient-to-tr from-pink-500 to-purple-500 text-white">
-					<span className="pl-12">
-						<span className="pr-4">Get Started</span>
-					</span>
-					<a className="link-arrow"></a>
-				</Button>
+				<Dropdown>
+					<DropdownTrigger>
+						<Button className="w-36 h-12 bg-gradient-to-tr from-pink-500 to-purple-500 text-white">
+							<span className="pl-12">
+								<span className="pr-4">Get Started</span>
+							</span>
+							<a className="link-arrow"></a>
+						</Button>
+					</DropdownTrigger>
+					<DropdownMenu aria-label="Static Actions">
+						<DropdownItem href="ex1">Ex1</DropdownItem>
+						<DropdownItem href="ex2">Ex2</DropdownItem>
+						<DropdownItem href="ex3">Ex3</DropdownItem>
+						<DropdownItem href="ex3">Ex4</DropdownItem>
+						<DropdownItem href="ex3">Ex5</DropdownItem>
+					</DropdownMenu>
+				</Dropdown>
 				<Button color="primary" variant="light" className="w-36 h-12">
 					Watch Video
 				</Button>
