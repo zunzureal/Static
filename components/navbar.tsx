@@ -16,7 +16,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { ThemeSwitch } from "./theme-switch";
 
-import { Logo } from "../components/icons";
 
 export const Navbar = () => {
 
