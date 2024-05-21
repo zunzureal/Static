@@ -73,13 +73,12 @@ function Page() {
 
     getmatrixi(matrix_i);
     getmatrixj(matrix_j);
-    
-    const M_A_X_result = (-(matrix_i / 1000)).toFixed(2);
-    const M_A_Y_result = (-(matrix_j / 1000)).toFixed(2);
+
+    const M_A_X_result = parseFloat((-(matrix_i / 1000)).toFixed(2));
+    const M_A_Y_result = parseFloat((-(matrix_j / 1000)).toFixed(2));
 
     getM_A_X_result(M_A_X_result);
     getM_A_Y_result(M_A_Y_result);
-
     // console.log('matrix_i:', matrix_i);
     // console.log('matrix_j:', matrix_j);
 
