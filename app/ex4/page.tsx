@@ -54,9 +54,9 @@ function Page() {
     const normalizedK = vector_k / magnitude;
 
     // Scale the normalized vector by the scaling factor
-    const scaledI = (scalingFactor * normalizedI).toFixed(2);
-    const scaledJ = (scalingFactor * normalizedJ).toFixed(2);
-    const scaledK = (scalingFactor * normalizedK).toFixed(2);
+    const scaledI = parseFloat((scalingFactor * normalizedI).toFixed(2));
+    const scaledJ = parseFloat((scalingFactor * normalizedJ).toFixed(2));
+    const scaledK = parseFloat((scalingFactor * normalizedK).toFixed(2));
 
     // Store the scaled vector components in an array
     const scaledVector = [scaledI, scaledJ, scaledK];
