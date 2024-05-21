@@ -1,6 +1,6 @@
 // ChatGPT โคตรโหดอะคับน้อนๆ
 
-'use client'
+"use client"
 import React, { useState } from 'react';
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
 
