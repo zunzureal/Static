@@ -2,7 +2,7 @@
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code"
-import { Button, Dropdown, DropdownTrigger,DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "../config/site"
 import { title, subtitle } from "../components/primitives";
@@ -43,7 +43,7 @@ export default function Home() {
 						<DropdownItem href="ex3">Ex5</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
-				<Button color="primary" variant="light" className="w-36 h-12">
+				<Button color="primary" variant="light" href="https://youtu.be/x1ef048b3CE" target="_blank" className="w-36 h-12">
 					Watch Video
 				</Button>
 			</div>
