@@ -23,15 +23,15 @@ function page() {
   const [By, setBy] = useState<number>()
 
   const handleSubmit = () => {
-    const hightB = a + b + c
-    setSumABC(hightB)
+    const heightB = a + b + c;
+    setSumABC(heightB);
 
-    const Wd = weight * d
-    setWd(Wd)
+    const Wd = weight * d;
+    setWd(Wd);
 
-    const By = Wd/(hightB-d)
-    setBy(By)
-  }
+    const By = parseFloat((Wd / (heightB - d)).toFixed(2));
+    setBy(By);
+  };
   return (
     <div className="flex w-full h-full">
       <MathJaxContext config={mathJaxConfig}>

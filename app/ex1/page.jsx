@@ -16,12 +16,12 @@ function Page() {
   const [B, setB] = useState(0);
   const [theta, setTheta] = useState(0);
 
-  const [rAx_B, setrAx_B] = useState(0);
-  const [rB_Crane, setrB_Crane] = useState(0);
-  const [rCrane_Box, setrCrane_Box] = useState(0);
+  const [rAx_B, setrAx_B] = useState(1.5);
+  const [rB_Crane, setrB_Crane] = useState(2);
+  const [rCrane_Box, setrCrane_Box] = useState(4);
   const [rSum_B_Box, setSum] = useState(0);
-  const [weightBox, setweightBox] = useState(0);
-  const [weightCrane, setweightCrane] = useState(0);
+  const [weightBox, setweightBox] = useState(23.544);
+  const [weightCrane, setweightCrane] = useState(9.81);
 
   const handleSubmit = () => {
     // Parse input values
@@ -65,7 +65,7 @@ function Page() {
               <img src="/pic.jpg" alt="" className="w-full" />
               <input
                 type="number"
-                className="absolute top-[54%] left-[1%] h-10 w-16 border border-gray-400 px-2"
+                className="absolute top-[54%] left-[0%] h-10 w-14 border border-gray-400 px-2"
                 name='rAx_B'
                 value={rAx_B}
                 onChange={(e) => setrAx_B(parseFloat(e.target.value))}
@@ -79,7 +79,7 @@ function Page() {
               />
               <input
                 type="number"
-                className="absolute top-[67%] left-[35%] h-10 w-20 border border-gray-400 px-2"
+                className="absolute top-[67%] left-[32%] h-10 w-20 border border-gray-400 px-2"
                 name='weightCrane'
                 value={weightCrane}
                 onChange={(e) => setweightCrane(parseFloat(e.target.value))}
