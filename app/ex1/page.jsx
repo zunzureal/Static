@@ -106,33 +106,33 @@ function Page() {
           <div className='grid grid-cols-2 gap-4 border p-3 w-3/5 scale-90'>
 
             <div className='flex flex-col justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum M_A = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum M_A = 0 $$`}</MathJax>
               <p>จะได้</p>
-              <MathJax>{`$$\\ ${rAx_B}B - ${rB_Crane}(${weightCrane}) - ${rSum_B_Box}(${weightBox}) = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ B = ${B}kN Ans $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ ${rAx_B}B - ${rB_Crane}(${weightCrane}) - ${rSum_B_Box}(${weightBox}) = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ B = ${B}kN Ans $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum F_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum F_x = 0 $$`}</MathJax>
               <p>จะได้</p>
-              <MathJax>{`$$\\ A_x + B = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_x + ${B} = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_x = ${Ax}kN Ans $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x + B = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x + ${B} = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x = ${Ax}kN Ans $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum F_y = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum F_y = 0 $$`}</MathJax>
               <p>จะได้</p>
-              <MathJax>{`$$\\ A_y - ${weightCrane} - ${weightBox} = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_y = ${Ay}kN Ans $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y - ${weightCrane} - ${weightBox} = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y = ${Ay}kN Ans $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <h1 className='text-lg font-bold'>พิจารณาแรงแฎิกิริยาที่จุด A</h1>
               <p>จะได้</p>
-              <MathJax>{`$$\\ A = \\sqrt{(${B})^2+(${Ay})^2} $$`}</MathJax>
-              <MathJax>{`$$\\ A = ${A}kN $$`}</MathJax>
-              <MathJax>{`$$ \\theta = \\tan^{-1}\\left(\\frac{${Ay}}{${A}}\\right) = ${theta}^o Ans $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A = \\sqrt{(${B})^2+(${Ay})^2} $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A = ${A}kN $$`}</MathJax>
+              <MathJax inline dynamic>{`$$ \\theta = \\tan^{-1}\\left(\\frac{${Ay}}{${A}}\\right) = ${theta}^o Ans $$`}</MathJax>
             </div>
 
           </div>

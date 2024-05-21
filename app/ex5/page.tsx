@@ -125,68 +125,68 @@ function Page() {
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>To find Ay by taking moment along x-axis under equilibrium condition use the following relation.
               </p>
-              <MathJax>{`$$\\ A_y(a) + B_y(a+b+c) - W(d) $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y(a) + B_y(a+b+c) - W(d) $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ A_y(${a} cm) - B_y(${a} cm + ${b} cm +${c} cm)  - (${weight} N)(${d} cm) = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_y = \\frac{${Wd} N\\cdot cm - B_y(${sumABC} cm)}{${a} cm} $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y(${a} cm) - B_y(${a} cm + ${b} cm +${c} cm)  - (${weight} N)(${d} cm) = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y = \\frac{${Wd} N\\cdot cm - B_y(${sumABC} cm)}{${a} cm} $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>Find By by adding all the forces along y-axis using the following relation.
               </p>
-              <MathJax>{`$$\\ A_y + B_y = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y + B_y = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ (\\frac{${Wd} N\\cdot cm - B_y(${sumABC} cm)}{${a} cm}) + B_y = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ ${Wd} N\\cdot cm - B_y(${sumABC} cm) + B_y(${d} cm) = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ B_y = \\frac{${Wd} N\\cdot cm}{${sumABC-d} cm} $$`}</MathJax>
-              <MathJax>{`$$\\ B_y = ${By} N $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ (\\frac{${Wd} N\\cdot cm - B_y(${sumABC} cm)}{${a} cm}) + B_y = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ ${Wd} N\\cdot cm - B_y(${sumABC} cm) + B_y(${d} cm) = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ B_y = \\frac{${Wd} N\\cdot cm}{${sumABC-d} cm} $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ B_y = ${By} N $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>To find Ay use the following relation.
               </p>
-              <MathJax>{`$$\\ A_y + B_y = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y + B_y = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ A_y + ${By} N = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_y = -${By} N$$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y + ${By} N = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_y = -${By} N$$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>Find Az by adding all the forces along z-axis using the following relation.
               </p>
-              <MathJax>{`$$\\ A_z - W = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_z - W = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ A_z - ${weight}N = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_z = ${weight}N $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_z - ${weight}N = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_z = ${weight}N $$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>To find Ax by taking moment along y-axis under equilibrium condition use the following relation.
               </p>
-              <MathJax>{`$$\\ A_x(a) + B_x(a + b + c) = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x(a) + B_x(a + b + c) = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ A_x${a} cm - B_x(${a} cm +${b} cm +${c} cm) = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_x = \\frac{-B_x(${sumABC} cm)}{${a} cm} $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x${a} cm - B_x(${a} cm +${b} cm +${c} cm) = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x = \\frac{-B_x(${sumABC} cm)}{${a} cm} $$`}</MathJax>
               
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>Find Bx by adding all the forces along x-axis using the following relation.
               </p>
-              <MathJax>{`$$\\ A_x + B_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x + B_x = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ \\frac{-B_x(${sumABC} cm)}{${a} cm} + B_x = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ B_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ \\frac{-B_x(${sumABC} cm)}{${a} cm} + B_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ B_x = 0 $$`}</MathJax>
               
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
               <p>Find reaction Ax using the following relation.
               </p>
-              <MathJax>{`$$\\ A_x + B_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x + B_x = 0 $$`}</MathJax>
               <p>Substitute the known values in the above expression.</p>
-              <MathJax>{`$$\\ A_x + 0 = 0 $$`}</MathJax>
-              <MathJax>{`$$\\ A_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x + 0 = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\ A_x = 0 $$`}</MathJax>
               
             </div>
           </div>

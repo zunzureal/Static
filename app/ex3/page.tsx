@@ -105,35 +105,35 @@ function Page() {
               <div className="flex-col w-1/2 h-full mt-[5px] mr-[5px] border">
                 <p className="mb-[10px] ml-[5px] mt-[5px]">หามุมของแรงปฏิกิริยา A กระทำกับแนวระนาบ</p>
                 <div className="mb-[10px] ml-[10px]">
-                  <MathJax inline>{`\\( \\theta = \\tan^{-1}\\left(\\frac{${l_D} + ${l_CB}}{${len_w}}\\right) \\)`}</MathJax>
+                  <MathJax inline dynamic>{`\\( \\theta = \\tan^{-1}\\left(\\frac{${l_D} + ${l_CB}}{${len_w}}\\right) \\)`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
-                  <MathJax className="mb-[10px]">{`\\( \\theta = ${ang_a}^o \\)`}</MathJax>
+                  <MathJax inline dynamic className="mb-[10px]">{`\\( \\theta = ${ang_a}^o \\)`}</MathJax>
                 </div>
               </div>
               <div className="flex-col w-1/2 h-full mt-[5px] border">
                 <p className="mb-[10px] ml-[5px] mt-[5px]">หามุมของแรงปฏิกิริยา B กระทำกับแนวระนาบ</p>
                 <div className="mb-[10px] ml-[10px]">
-                  <MathJax inline>{`\\( \\tan \\theta = \\frac{${l_D}}{${l_B}} \\)`}</MathJax>
+                  <MathJax inline dynamic>{`\\( \\tan \\theta = \\frac{${l_D}}{${l_B}} \\)`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
-                  <MathJax>{`\\( \\theta = ${ang_b}^o \\)`}</MathJax>
+                  <MathJax inline dynamic>{`\\( \\theta = ${ang_b}^o \\)`}</MathJax>
                 </div>
               </div>
             </div>
             <div className="flex-col w-full h-1/2 border p-1 mt-[5px]">
               <p className="mb-[5px] mt-[5px] ml-[5px]">พิจารณาหาแรงปฏิกิริยาที่จุด A และจุด B </p>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax inline>{`\\( \\sum F_x = 0 ; F_A \\cos( ${ang_a} ) - F_B \\cos( ${ang_b} ) + ${F} = 0 \\)`}</MathJax>
+                <MathJax inline dynamic>{`\\( \\sum F_x = 0 ; F_A \\cos( ${ang_a} ) - F_B \\cos( ${ang_b} ) + ${F} = 0 \\)`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax >{`\\( \\sum F_y = 0 ; F_A \\sin( ${ang_a} ) - F_B \\sin( ${ang_b} ) = 0 \\)`}</MathJax>
+                <MathJax inline dynamic>{`\\( \\sum F_y = 0 ; F_A \\sin( ${ang_a} ) - F_B \\sin( ${ang_b} ) = 0 \\)`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax >{`\\( \\ F_A = ${aForce} N \\)`}</MathJax>
+                <MathJax inline dynamic>{`\\( \\ F_A = ${aForce} N \\)`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax >{`\\( \\ F_B = ${bForce} N \\)`}</MathJax>
+                <MathJax inline dynamic>{`\\( \\ F_B = ${bForce} N \\)`}</MathJax>
               </div>
             </div>
           </div>

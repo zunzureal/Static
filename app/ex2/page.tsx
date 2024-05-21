@@ -78,24 +78,24 @@ function Page() {
           <div className='grid grid-cols-2 gap-4 border p-3 w-3/5 scale-90'>
 
             <div className='flex flex-col col-span-2 justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum M_C = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum M_C = 0 $$`}</MathJax>
               <p>Thus,</p>
-              <MathJax>{`$$(T_{AB} \\cos(${T_angle}^\\circ) \\cdot 2) + (T_{AB} \\sin(${T_angle}^\\circ) \\cdot 4) - (${forceDownA} \\cdot 2) - (${forceDownB} \\cdot 4) = 0$$`}</MathJax>
-              <MathJax>{`$$T_{AB} = ${T_AB} \\text{kN}$$`}</MathJax>
+              <MathJax inline dynamic>{`$$(T_{AB} \\cos(${T_angle}^\\circ) \\cdot 2) + (T_{AB} \\sin(${T_angle}^\\circ) \\cdot 4) - (${forceDownA} \\cdot 2) - (${forceDownB} \\cdot 4) = 0$$`}</MathJax>
+              <MathJax inline dynamic>{`$$T_{AB} = ${T_AB} \\text{kN}$$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum F_x = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum F_x = 0 $$`}</MathJax>
               <p>Thus,</p>
-              <MathJax>{`$$C_x = T_{AB} \\cos(${T_angle}^\\circ)$$`}</MathJax>
-              <MathJax>{`$$C_x = ${C_x} \\text{kN}$$`}</MathJax>
+              <MathJax inline dynamic>{`$$C_x = T_{AB} \\cos(${T_angle}^\\circ)$$`}</MathJax>
+              <MathJax inline dynamic>{`$$C_x = ${C_x} \\text{kN}$$`}</MathJax>
             </div>
 
             <div className='flex flex-col justify-start items-start border p-1'>
-              <MathJax>{`$$\\sum F_y = 0 $$`}</MathJax>
+              <MathJax inline dynamic>{`$$\\sum F_y = 0 $$`}</MathJax>
               <p>Thus,</p>
-              <MathJax>{`$$C_y + T_{AB} \\sin(${T_angle}^\\circ) - ${forceDownA} - ${forceDownB} = 0$$`}</MathJax>
-              <MathJax>{`$$C_y = ${C_y} \\text{kN}$$`}</MathJax>
+              <MathJax inline dynamic>{`$$C_y + T_{AB} \\sin(${T_angle}^\\circ) - ${forceDownA} - ${forceDownB} = 0$$`}</MathJax>
+              <MathJax inline dynamic>{`$$C_y = ${C_y} \\text{kN}$$`}</MathJax>
             </div>
           </div>
         </div>
