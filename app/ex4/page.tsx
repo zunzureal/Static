@@ -143,24 +143,24 @@ function Page() {
             <div className="flex w-full h-1/2 mb-[5px] w-[1355px] h-[450px]">
               <div className="flex-col w-1/2 h-full mt-[5px] mr-[5px] border">
                 <div className="mb-[10px] ml-[10px]">
-                  <MathJax inline>{`$$\\ r_{BC}   = ( ${c_x} - ${a_x} )i + ( ${c_y} - ${a_y} )j + ( 0 - 0 )k $$`}</MathJax>
-                  <MathJax inline>{`$$ r_{BC} = \\ ${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}i  ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}j  ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}k \\ $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$\\ r_{BC}   = ( ${c_x} - ${a_x} )i + ( ${c_y} - ${a_y} )j + ( 0 - 0 )k $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$ r_{BC} = \\ ${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}i  ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}j  ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}k \\ $$`}</MathJax>
                 </div>
                 <div className="ml-[10px]">
-                  <MathJax inline>{`$$ F = ${F} \\left[ \\frac{${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}\\mathbf{i} + ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}\\mathbf{j} - ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}\\mathbf{k}}{\\sqrt{(${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])})^2 + (${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])})^2 + (${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])})^2}} \\right] = ${Math.sign(vectorF[0]) === -1 ? '-' : '+'}${Math.abs(vectorF[0])}\\mathbf{i} ${Math.sign(vectorF[1]) === -1 ? '-' : '+'}${Math.abs(vectorF[1])}\\mathbf{j} ${Math.sign(vectorF[2]) === -1 ? '-' : '+'}${Math.abs(vectorF[2])}\\mathbf{k} \\ \\text{N} $$`}</MathJax>
-                  <MathJax inline>{`$$ A_x = ${Math.sign(vectorConverter[0]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[0])} \\, \\text{N} $$`}</MathJax>
-                  <MathJax inline>{`$$ A_y = ${Math.sign(vectorConverter[1]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[1])} \\, \\text{N} $$`}</MathJax>
-                  <MathJax inline>{`$$ A_z = ${Math.sign(vectorConverter[2]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[2])} \\, \\text{N} $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$ F = ${F} \\left[ \\frac{${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])}\\mathbf{i} + ${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])}\\mathbf{j} - ${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])}\\mathbf{k}}{\\sqrt{(${Math.sign(vectorBC[0]) === -1 ? '-' : '+'}${Math.abs(vectorBC[0])})^2 + (${Math.sign(vectorBC[1]) === -1 ? '-' : '+'}${Math.abs(vectorBC[1])})^2 + (${Math.sign(vectorBC[2]) === -1 ? '-' : '+'}${Math.abs(vectorBC[2])})^2}} \\right] = ${Math.sign(vectorF[0]) === -1 ? '-' : '+'}${Math.abs(vectorF[0])}\\mathbf{i} ${Math.sign(vectorF[1]) === -1 ? '-' : '+'}${Math.abs(vectorF[1])}\\mathbf{j} ${Math.sign(vectorF[2]) === -1 ? '-' : '+'}${Math.abs(vectorF[2])}\\mathbf{k} \\ \\text{N} $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$ A_x = ${Math.sign(vectorConverter[0]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[0])} \\, \\text{N} $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$ A_y = ${Math.sign(vectorConverter[1]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[1])} \\, \\text{N} $$`}</MathJax>
+                  <MathJax inline dynamic>{`$$ A_z = ${Math.sign(vectorConverter[2]) === -1 ? '-' : '+'}${Math.abs(vectorConverter[2])} \\, \\text{N} $$`}</MathJax>
                 </div>
               </div>
             </div>
             <div className="flex-col w-full h-1/2 border p-1 mt-[5px]">
               <div className="mb-[10px] ml-[5px]">
-                <MathJax inline>{`$$\\ r_{ac}   = ( ${c_x} - 0 )i + ( ${c_y} - 0 )j + ( 0 - 0 )k $$`}</MathJax>
-                <MathJax inline>{`$$ r_{ac} = \\ ${Math.sign(vectorAC[0]) === -1 ? '-' : '+'}${Math.abs(vectorAC[0])}i  ${Math.sign(vectorAC[1]) === -1 ? '-' : '+'}${Math.abs(vectorAC[1])}j \\ $$`}</MathJax>
+                <MathJax inline dynamic>{`$$\\ r_{ac}   = ( ${c_x} - 0 )i + ( ${c_y} - 0 )j + ( 0 - 0 )k $$`}</MathJax>
+                <MathJax inline dynamic>{`$$ r_{ac} = \\ ${Math.sign(vectorAC[0]) === -1 ? '-' : '+'}${Math.abs(vectorAC[0])}i  ${Math.sign(vectorAC[1]) === -1 ? '-' : '+'}${Math.abs(vectorAC[1])}j \\ $$`}</MathJax>
               </div>
               <div className="mb-[10px] ml-[5px]">
-                <MathJax>
+                <MathJax inline dynamic>
                   {`
                   \\[
                   \\mathbf{M}_A + \\begin{vmatrix}
@@ -178,19 +178,19 @@ function Page() {
               </div>
               <div className="mb-[10px] ml-[5px]">
                 <p>
-                  <MathJax>
+                  <MathJax inline dynamic>
                     {`$$ M_{Ax} = ${M_A_X_result} \\, \\text{kN-m} $$`}
                   </MathJax>
                 </p>
 
                 <p>
-                  <MathJax>
+                  <MathJax inline dynamic>
                     {`$$ M_{Ay} = ${M_A_Y_result} \\, \\text{kN-m} $$`}
                   </MathJax>
                 </p>
 
                 <p>
-                  <MathJax>
+                  <MathJax inline dynamic>
                     {`$$ M_{Az} = 0 $$`}
                   </MathJax>
                 </p>
