@@ -68,14 +68,12 @@ function Page() {
     const vector_ac_j = c_y - 0;
     const vector_ac_k = 0 - 0;
 
-    setVectorAC([vector_ac_i, vector_ac_j, vector_ac_k]);
-
     const matrix_i = parseFloat((c_y * scaledK).toFixed(2));
-    const matrix_j = parseFloat(-(c_x * scaledK).toFixed(2));
+    const matrix_j = parseFloat((-c_x * scaledK).toFixed(2));
 
     getmatrixi(matrix_i);
     getmatrixj(matrix_j);
-
+    
     const M_A_X_result = (-(matrix_i / 1000)).toFixed(2);
     const M_A_Y_result = (-(matrix_j / 1000)).toFixed(2);
 
